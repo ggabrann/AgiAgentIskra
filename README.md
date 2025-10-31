@@ -9,6 +9,7 @@
 - `.codexrc` — конфигурация Codex для работы с репозиторием.
 - `Makefile` — набор базовых команд (`setup`, `deps`, `lint`, `test`, `build`, `ci`, `run`).
 - `SECURITY.md`, `veil_rules.txt` — стражи безопасности и запрещённые паттерны.
+- `release_tool/finalize_release.sh` — автоматическая проверка готовности релиза (ветка, тег, PR, GitHub Release, отчёт аудита).
 
 ## Быстрый старт
 1. Убедитесь, что включены MFA/SSO для GitHub и связанных сервисов.

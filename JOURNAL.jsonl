@@ -1,1 +1,2 @@
 {"timestamp": "2025-10-31T11:40:00Z", "actor": "codex", "event": "memory_api_enhancement", "summary": "Добавлены базовые агенты оркестратора, расширена память и исправлены утилиты.", "delta": "+3"}
+{"timestamp": "2025-10-31T20:47:45Z", "actor": "codex", "event": "release_finalization_script", "summary": "Добавлен скрипт finalize_release для проверки релизных артефактов и упомянута его команда в README.", "delta": "+1"}
