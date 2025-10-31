@@ -23,7 +23,10 @@ from pathlib import Path
 
 def sync_builds(repo_root: Path) -> None:
     canon_dir = repo_root / 'canon'
-    builds_dir = repo_root / 'iskra' / 'builds'
+    builds_dir = repo_root / 'builds'
+    if not builds_dir.exists():
+        raise FileNotFoundError(f"Builds directory not found: {builds_dir}")
+
     # Determine canonical files to copy
     canonical_files = [p for p in canon_dir.iterdir() if p.is_file()]
     builds = [d for d in builds_dir.iterdir() if d.is_dir()]
