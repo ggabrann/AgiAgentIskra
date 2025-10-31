@@ -1,0 +1,9 @@
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+exclude = "/(\\.venv|_iskra_work|node_modules|dist|build)/"
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip = [".venv","_iskra_work","node_modules","dist","build"]
