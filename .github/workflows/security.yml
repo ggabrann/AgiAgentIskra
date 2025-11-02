@@ -1,0 +1,22 @@
+name: security
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  semgrep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: returntocorp/semgrep-action@v1
+        with:
+          config: p/default
+  trivy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Trivy
+        uses: aquasecurity/setup-trivy@v0.2.2
+      - name: Trivy FS scan
+        run: trivy fs --exit-code 0 --severity HIGH,CRITICAL .

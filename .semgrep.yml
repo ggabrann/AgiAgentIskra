@@ -1,0 +1,8 @@
+rules:
+  - id: no-secrets-in-code
+    languages: [python]
+    message: Potential secret detected
+    severity: ERROR
+    patterns:
+      - pattern: /AKIA[0-9A-Z]{16}/
+      - pattern: /SECRET|TOKEN|PASSWORD|API_KEY/
